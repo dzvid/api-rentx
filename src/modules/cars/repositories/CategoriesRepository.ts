@@ -1,5 +1,5 @@
-import { Category } from '@models/Category';
-import { ICreateCategoryDTO } from '@repositories/ICategoriesRepository';
+import { Category } from '@modules/cars/models/Category';
+import { ICreateCategoryDTO } from '@modules/cars/repositories/ICategoriesRepository';
 
 class CategoriesRepository {
   private categories: Category[];
