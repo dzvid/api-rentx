@@ -4,7 +4,7 @@ import { CategoriesRepository } from '@modules/cars/repositories/CategoriesRepos
 import { CreateCategoryController } from './CreateCategoryController';
 import { CreateCategoryUsecase } from './CreateCategoryUseCase';
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 const createCategoryUseCase = new CreateCategoryUsecase(categoriesRepository);
 const createCategoryController = new CreateCategoryController(
   createCategoryUseCase
