@@ -1,9 +1,8 @@
 import { Specification } from '@modules/cars/models/Specification';
-
 import {
   ICreateSpecificationDTO,
   ISpecificationRepository,
-} from './ISpecificationsRepository';
+} from '@modules/cars/repositories/ISpecificationsRepository';
 
 class SpecificationsRepository implements ISpecificationRepository {
   private specifications: Specification[];

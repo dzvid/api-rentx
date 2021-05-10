@@ -1,5 +1,5 @@
 // inicialização do usecase
-import { CategoriesRepository } from '@modules/cars/repositories/CategoriesRepository';
+import { CategoriesRepository } from '@modules/cars/repositories/implementations/CategoriesRepository';
 
 import { CreateCategoryController } from './CreateCategoryController';
 import { CreateCategoryUsecase } from './CreateCategoryUseCase';
