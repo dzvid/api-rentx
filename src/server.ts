@@ -1,13 +1,10 @@
-import { categoriesRoutes } from '@routes/categories.routes';
-import { specificationsRoutes } from '@routes/specifications.routes';
+import { router } from '@routes/index';
 import express from 'express';
 
 const app = express();
 const port = 3333;
 
 app.use(express.json());
-
-app.use('/categories', categoriesRoutes);
-app.use('/specifications', specificationsRoutes);
+app.use(router);
 
 app.listen(port, () => console.log(`Server is running on port ${port}.`));
