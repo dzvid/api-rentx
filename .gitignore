@@ -72,6 +72,11 @@ web_modules/
 .env
 .env.test
 
+# Temporary files
+tmp/*
+!tmp/.gitkeep
+
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
