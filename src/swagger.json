@@ -43,6 +43,48 @@
             "description": "Category already exists"
           }
         }
+      },
+      "get": {
+        "tags": ["Category"],
+        "summary": "List all cars categories.",
+        "description": "List all cars categories in application.",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "uuid"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "Date"
+                      }
+                    }
+                  },
+                  "example": [
+                    {
+                      "id": "9aa8997d-476c-4c10-9390-48be43e4381d",
+                      "name": "SUV",
+                      "description": "Utilitário esportivo",
+                      "created_at": "2021-05-11T20:57:20.700Z"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
