@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RentalX documentation",
+    "description": "API to manage renting cars.",
+    "version": "1.0.0",
+    "contact": {
+      "email": "oliveiradavid.dev@gmail.com"
+    }
+  }
+}
