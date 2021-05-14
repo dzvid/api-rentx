@@ -1,4 +1,4 @@
-import { Specification } from '@modules/cars/models/Specification';
+import { Specification } from '@modules/cars/entities/Specification';
 import {
   ICreateSpecificationDTO,
   ISpecificationRepository,
