@@ -1,5 +1,18 @@
 version: '3.7'
 services:
+  rentx-db:
+    image: postgres
+    container_name: rentx-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - 'POSTGRES_USER=${TYPEORM_USERNAME}'
+      - 'POSTGRES_PASSWORD=${TYPEORM_PASSWORD}'
+      - 'POSTGRES_DB=${TYPEORM_DATABASE}'
+    volumes:
+      - pgdata:/data/postgres
+
   rentx-api:
     build: .
     container_name: rentx-api
@@ -7,3 +20,11 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/app
+    depends_on:
+      - rentx-db
+    links:
+      - rentx-db
+
+volumes:
+  pgdata:
+    driver: local
