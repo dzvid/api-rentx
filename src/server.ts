@@ -1,10 +1,12 @@
-import { router } from '@routes/index';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-import swaggerConfig from './swagger.json';
-
 import './database';
+/** Dependency injection */
+import './shared/container';
+
+import { router } from './routes';
+import swaggerConfig from './swagger.json';
 
 const app = express();
 const port = 3333;
