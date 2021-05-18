@@ -1,4 +1,6 @@
+import errorHandler from '@middlewares/errorHandler';
 import express from 'express';
+import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
 import './database';
@@ -14,5 +16,6 @@ const port = 3333;
 app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerConfig));
 app.use(router);
+app.use(errorHandler);
 
 app.listen(port, () => console.log(`Server is running on port ${port}.`));
