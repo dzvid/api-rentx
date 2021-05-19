@@ -1,9 +1,8 @@
+import authConfig from '@config/auth';
 import { UsersRepository } from '@modules/accounts/repositories/implementations/UsersRepository';
 import { NextFunction, Request, Response } from 'express';
 import { verify } from 'jsonwebtoken';
 import { AppError } from 'src/errors/AppError';
-
-import authConfig from '../modules/accounts/config/auth';
 
 interface IPayload {
   sub: string;
@@ -32,6 +31,10 @@ export async function ensureAuthenticated(
     if (!user) {
       throw new AppError('User does not exists', 401);
     }
+
+    request.user = {
+      id: user_id,
+    };
 
     next();
   } catch (error) {
