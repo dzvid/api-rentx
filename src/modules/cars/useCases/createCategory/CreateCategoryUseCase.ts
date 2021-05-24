@@ -8,7 +8,7 @@ interface IRequest {
 }
 
 @injectable()
-class CreateCategoryUsecase {
+class CreateCategoryUseCase {
   constructor(
     @inject('CategoriesRepository')
     private categoriesRepository: ICategoriesRepository
@@ -27,4 +27,4 @@ class CreateCategoryUsecase {
   }
 }
 
-export { CreateCategoryUsecase };
+export { CreateCategoryUseCase };

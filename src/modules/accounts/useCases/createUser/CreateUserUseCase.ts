@@ -1,6 +1,6 @@
 import { AppError } from '@errors/AppError';
 import { ICreateUserDTO } from '@modules/accounts/dtos/ICreateUserDTO';
-import { UsersRepository } from '@modules/accounts/repositories/implementations/UsersRepository';
+import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
 import { hash } from 'bcrypt';
 import { inject, injectable } from 'tsyringe';
 
@@ -8,7 +8,7 @@ import { inject, injectable } from 'tsyringe';
 class CreateUserUseCase {
   constructor(
     @inject('UsersRepository')
-    private usersRepository: UsersRepository
+    private usersRepository: IUsersRepository
   ) {}
 
   async execute({

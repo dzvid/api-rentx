@@ -5,10 +5,10 @@ import { getRepository, Repository } from 'typeorm';
 import { IUsersRepository } from '../IUsersRepository';
 
 class UsersRepository implements IUsersRepository {
-  private respository: Repository<User>;
+  private repository: Repository<User>;
 
   constructor() {
-    this.respository = getRepository(User);
+    this.repository = getRepository(User);
   }
 
   async create({
@@ -19,7 +19,7 @@ class UsersRepository implements IUsersRepository {
     id,
     avatar,
   }: ICreateUserDTO): Promise<void> {
-    const user = this.respository.create({
+    const user = this.repository.create({
       name,
       email,
       password,
@@ -28,16 +28,16 @@ class UsersRepository implements IUsersRepository {
       id,
     });
 
-    await this.respository.save(user);
+    await this.repository.save(user);
   }
 
   async findByEmail(email: string): Promise<User> {
-    const user = await this.respository.findOne({ email });
+    const user = await this.repository.findOne({ email });
     return user;
   }
 
   async findById(id: string): Promise<User> {
-    const user = await this.respository.findOne(id);
+    const user = await this.repository.findOne(id);
     return user;
   }
 }
