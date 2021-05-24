@@ -1,7 +1,6 @@
-/*
- * For a detailed explanation regarding each configuration property and type check, visit:
- * https://jestjs.io/docs/en/configuration.html
- */
+import { pathsToModuleNameMapper } from 'ts-jest/utils';
+
+import { compilerOptions } from './tsconfig.json';
 
 export default {
   // All imported modules in your tests should be mocked automatically
@@ -81,14 +80,18 @@ export default {
   // ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  moduleNameMapper: {
-    '@routes/(.*)': ['<rootDir>/src/routes/$1'],
-    '@modules/(.*)': ['<rootDir>/src/modules/$1'],
-    '@middlewares/(.*)': ['<rootDir>/src/middlewares/$1'],
-    '@config/(.*)': ['<rootDir>/src/config/$1'],
-    '@errors/(.*)': ['<rootDir>/src/errors/$1'],
-    '@utils/(.*)': ['<rootDir>/src/utils/$1'],
-  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: '<rootDir>/src',
+  }),
+
+  // {
+  //   '@routes/(.*)': ['<rootDir>/src/routes/$1'],
+  //   '@modules/(.*)': ['<rootDir>/src/modules/$1'],
+  //   '@middlewares/(.*)': ['<rootDir>/src/middlewares/$1'],
+  //   '@config/(.*)': ['<rootDir>/src/config/$1'],
+  //   '@errors/(.*)': ['<rootDir>/src/errors/$1'],
+  //   '@utils/(.*)': ['<rootDir>/src/utils/$1'],
+  // },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
