@@ -1,14 +1,16 @@
-import errorHandler from '@middlewares/errorHandler';
 import express from 'express';
 import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
-import './database';
-/** Dependency injection */
-import './shared/container';
+import errorHandler from '@shared/infra/http/middlewares/errorHandler';
 
-import { router } from './routes';
-import swaggerConfig from './swagger.json';
+import '@shared/infra/typeorm';
+/** Dependency injection */
+import '@shared/container';
+
+import { router } from '@shared/infra/http/routes';
+
+import swaggerConfig from '../../../swagger.json';
 
 const app = express();
 const port = 3333;

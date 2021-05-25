@@ -1,4 +1,4 @@
-import { Category } from '@modules/cars/entities/Category';
+import { Category } from '@modules/cars/infra/typeorm/Category';
 
 interface ICreateCategoryDTO {
   name: string;

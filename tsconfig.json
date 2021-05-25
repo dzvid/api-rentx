@@ -10,6 +10,7 @@
       "@modules/*": ["modules/*"],
       "@middlewares/*": ["middlewares/*"],
       "@config/*": ["config/*"],
+      "@shared/*": ["shared/*"],
       "@errors/*": ["errors/*"],
       "@utils/*": ["utils/*"]
     },
