@@ -12,7 +12,6 @@ services:
       - 'POSTGRES_DB=${DB_DATABASE}'
     volumes:
       - pgdata:/data/postgres
-
   rentx-api:
     build: .
     container_name: rentx-api
@@ -24,7 +23,6 @@ services:
       - rentx-db
     links:
       - rentx-db
-
 volumes:
   pgdata:
     driver: local
