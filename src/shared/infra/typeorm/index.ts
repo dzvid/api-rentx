@@ -1,4 +1,12 @@
-import { createConnection } from 'typeorm';
+import { Connection, createConnection, getConnectionOptions } from 'typeorm';
 import 'dotenv/config';
 
-createConnection();
+export default async (host = 'rentx-db'): Promise<Connection> => {
+  const defaultOptions = await getConnectionOptions();
+
+  return createConnection(
+    Object.assign(defaultOptions, {
+      host,
+    })
+  );
+};

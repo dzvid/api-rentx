@@ -3,8 +3,7 @@ import 'express-async-errors';
 import swaggerUi from 'swagger-ui-express';
 
 import errorHandler from '@shared/infra/http/middlewares/errorHandler';
-
-import '@shared/infra/typeorm';
+import createConnection from '@shared/infra/typeorm';
 /** Dependency injection */
 import '@shared/container';
 
@@ -12,6 +11,7 @@ import { router } from '@shared/infra/http/routes';
 
 import swaggerConfig from '../../../swagger.json';
 
+createConnection();
 const app = express();
 const port = 3333;
 
