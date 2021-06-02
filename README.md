@@ -25,8 +25,6 @@
 
 **RF**
 - Deve ser possível cadastrar uma ou mais especificações para um carro.
-- Deve ser possível listyar todas as especificações.
-- Deve ser possível listar todos os carros.
 
 
 **RN**
