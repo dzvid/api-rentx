@@ -25,7 +25,6 @@ export class CreateCarsImages1622600939320 implements MigrationInterface {
             default: 'now()',
           },
         ],
-
         foreignKeys: [
           {
             name: 'FKCarsImage',
