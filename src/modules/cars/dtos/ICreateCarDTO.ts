@@ -1,4 +1,4 @@
-import { Specification } from '../infra/typeorm/Specification';
+import { Specification } from '../infra/typeorm/entities/Specification';
 
 interface ICreateCarDTO {
   name: string;

@@ -1,4 +1,4 @@
-import { Car } from '@modules/cars/infra/typeorm/Car';
+import { Car } from '@modules/cars/infra/typeorm/entities/Car';
 import { ICarsRepository } from '@modules/cars/repositories/ICarsRepository';
 import { ISpecificationRepository } from '@modules/cars/repositories/ISpecificationsRepository';
 import { inject, injectable } from 'tsyringe';

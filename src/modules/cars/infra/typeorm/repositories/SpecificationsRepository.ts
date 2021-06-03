@@ -1,4 +1,4 @@
-import { Specification } from '@modules/cars/infra/typeorm/Specification';
+import { Specification } from '@modules/cars/infra/typeorm/entities/Specification';
 import {
   ICreateSpecificationDTO,
   ISpecificationRepository,
