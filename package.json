@@ -14,6 +14,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "csv-parse": "^4.15.4",
+    "dayjs": "^1.10.5",
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
@@ -22,8 +23,8 @@
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.1.6",
-    "tsyringe": "^4.5.0",
     "ts-jest": "^26.5.6",
+    "tsyringe": "^4.5.0",
     "typeorm": "^0.2.32",
     "uuid": "^8.3.2"
   },
