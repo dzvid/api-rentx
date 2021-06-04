@@ -3,7 +3,8 @@ import { CreateUserController } from '@modules/accounts/useCases/createUser/Crea
 import { UpdateUserAvatarController } from '@modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController';
 import { Router } from 'express';
 import multer from 'multer';
-import { ensureAuthenticated } from 'shared/infra/http/middlewares/ensureAuthenticated';
+
+import { ensureAuthenticated } from '@shared/infra/http/middlewares/ensureAuthenticated';
 
 const usersRoutes = Router();
 const uploadAvatar = multer(uploadConfig.upload('./tmp/avatar'));
