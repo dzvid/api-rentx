@@ -77,7 +77,9 @@ web_modules/
 
 # Temporary files
 tmp/*
+!tmp/.gitkeep
 !tmp/avatar/.gitkeep
+!tmp/cars/.gitkeep
 
 
 # parcel-bundler cache (https://parceljs.org/)
