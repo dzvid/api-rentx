@@ -3,9 +3,11 @@ import { S3 } from 'aws-sdk';
 import fs from 'fs';
 import mime from 'mime';
 import { resolve } from 'path';
+import { injectable } from 'tsyringe';
 
 import { IStorageProvider } from '../IStorageProvider';
 
+@injectable()
 class S3StorageProvider implements IStorageProvider {
   private client: S3;
 
